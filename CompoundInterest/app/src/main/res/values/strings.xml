@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CompoundInterest</string>
+
+    <string name="title_activity_second_actitvity">secondActitvity</string>
+    <string name="title_activity_contiuous_interest">contiuousInterest</string>
+
+    <string-array name="interestSpinner2">
+        <item>SimpleInterest</item>
+        <item>CompoundInterest</item>
+        <item>ContinuousCompoundInterest</item>
+    </string-array>
+
+
+    <string-array name="interestSpinner3">
+        <item>ContinuousCompoundInterest</item>
+        <item>SimpleInterest</item>
+        <item>CompoundInterest</item>
+    </string-array>
+    <string-array name="interestSpinner">
+        <item>CompoundInterest</item>
+        <item>SimpleInterest</item>
+        <item>ContinuousCompoundInterest</item>
+    </string-array>
+</resources>
