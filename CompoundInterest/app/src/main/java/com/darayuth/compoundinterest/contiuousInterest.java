@@ -106,7 +106,7 @@ public class contiuousInterest extends AppCompatActivity implements  AdapterView
         String results = String.valueOf(df2.format(result));
         Intent intent = new Intent(this, interestResult.class);
         intent.putExtra("results", results);
-        intent.putExtra("spinnerPicking", "simpleInterest");
+        intent.putExtra("spinnerPicking", "ContinuousCompoundInterest");
         startActivity(intent);
     }
 }

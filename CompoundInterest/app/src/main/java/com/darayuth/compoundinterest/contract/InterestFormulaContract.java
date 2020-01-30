@@ -6,9 +6,9 @@ public interface InterestFormulaContract {
         void displayCompoundInterest(double result);
     }
     public interface presenter{
-        void calculateCompoundInterest(double pricipal, double rate, double numberOfTimes, double Time );
-        void calculateSimpleInterest(double principalAmount, double interestRate, double time );
-        void calculateContinousCompoundInterest(double principalAmount, double interestRate, double time );
+        double calculateCompoundInterest(double pricipal, double rate, double numberOfTimes, double Time );
+        double calculateSimpleInterest(double principalAmount, double interestRate, double time );
+        double calculateContinousCompoundInterest(double principalAmount, double interestRate, double time );
     }
 
 

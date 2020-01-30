@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#81C784"
+    android:background="#4DB6AC"
     tools:context=".MainActivity">
 
     <Button
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="160dp"
         android:backgroundTint="#4FC3F7"
-        android:text="submit"
+        android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.852"
@@ -34,8 +34,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="348dp"
-        android:layout_height="259dp"
+        android:layout_width="361dp"
+        android:layout_height="393dp"
         android:layout_marginTop="36dp"
         android:background="#ECE0E0"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +47,8 @@
             android:id="@+id/editTextR"
             android:layout_width="74dp"
             android:layout_height="45dp"
+            android:gravity="center_horizontal"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintStart_toEndOf="@+id/textView4"
@@ -58,6 +58,7 @@
             android:id="@+id/editTextN"
             android:layout_width="74dp"
             android:layout_height="45dp"
+            android:gravity="center_horizontal"
             android:layout_marginStart="12dp"
             android:ems="10"
             android:inputType="textPersonName"
@@ -68,12 +69,12 @@
             android:id="@+id/editTextP"
             android:layout_width="74dp"
             android:layout_height="45dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="196dp"
+            android:layout_marginEnd="208dp"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <EditText
             android:id="@+id/editTextT"
@@ -82,11 +83,22 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/editTextN"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="348dp"
+            android:layout_height="144dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/compound" />
 
         <TextView
             android:id="@+id/textView5"
@@ -94,7 +106,7 @@
             android:layout_height="25dp"
             android:layout_marginStart="16dp"
             android:text="N   ="
-            android:textSize="20dp"
+            android:textSize="24dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextN"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -103,7 +115,7 @@
             android:layout_width="50dp"
             android:layout_height="25dp"
             android:text="P   ="
-            android:textSize="20dp"
+            android:textSize="24dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextP"
             app:layout_constraintEnd_toStartOf="@+id/editTextP"
             app:layout_constraintHorizontal_bias="0.551"
@@ -115,7 +127,7 @@
             android:layout_height="25dp"
             android:layout_marginStart="16dp"
             android:text="R   ="
-            android:textSize="20dp"
+            android:textSize="24dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextR"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -126,7 +138,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="T   ="
-            android:textSize="20dp"
+            android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
@@ -138,8 +150,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="188dp"
             android:text="%"
+            android:textSize="24dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextR"
             app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

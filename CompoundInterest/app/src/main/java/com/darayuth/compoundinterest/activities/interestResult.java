@@ -32,11 +32,11 @@ public class interestResult extends AppCompatActivity {
 
     public String menu(String choice){
         if(choice.equalsIgnoreCase("compoundInterest")){
-            return "FutureValue =  ";
+            return "A =  ";
         }else if(choice.equalsIgnoreCase("simpleInterest")){
-            return "Interest = ";
+            return "I = ";
         }else if(choice.equalsIgnoreCase("ContinuousCompoundInterest")){
-            return "FutureValue = ";
+            return "A = ";
         }
       return null;
     }

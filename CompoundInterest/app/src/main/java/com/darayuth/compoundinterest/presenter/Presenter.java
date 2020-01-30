@@ -14,32 +14,35 @@ public class Presenter implements InterestFormulaContract.presenter {
     private InterestFormulaContract.view view;
     private Interest compoundInterest, simpleInterest, continousInterest;
 
+    public Presenter(){};
     public Presenter(InterestFormulaContract.view view){
         this.view = view;
     }
 
 
     @Override
-    public void calculateCompoundInterest(double pricipal, double interestRate, double numberOfTimes, double Time) {
+    public double calculateCompoundInterest(double pricipal, double interestRate, double numberOfTimes, double Time) {
         compoundInterest = new CompoundInterest(pricipal, interestRate, numberOfTimes, Time);
         double middle = ((compoundInterest.getInterestRate() / 100) / numberOfTimes) + 1 ;
         double exponent = numberOfTimes * compoundInterest.getTime();
         double result = Math.pow(middle, exponent) * compoundInterest.getPrincipalAmount();
-
+        Log.i(TAG, "calculateCompoundInterest: "+result);
         this.view.displayCompoundInterest(result);
+        return result;
 
     }
 
     @Override
-    public void calculateSimpleInterest(double principalAmount, double interestRate, double time) {
+    public double calculateSimpleInterest(double principalAmount, double interestRate, double time) {
         simpleInterest = new SimpleInterest(principalAmount, interestRate, time);
         double result = (simpleInterest.getInterestRate() / 100) * simpleInterest.getPrincipalAmount() * simpleInterest.getTime();
 
         this.view.displayCompoundInterest(result);
+        return result;
     }
 
     @Override
-    public void calculateContinousCompoundInterest(double principalAmount, double interestRate, double time) {
+    public double calculateContinousCompoundInterest(double principalAmount, double interestRate, double time) {
         continousInterest = new ContinousInterest(principalAmount, interestRate, time);
         double eulerNumber = 2.71828;
 
@@ -49,6 +52,7 @@ public class Presenter implements InterestFormulaContract.presenter {
         double futureValue = Math.pow(pTimesE, exponent);
 
         this.view.displayCompoundInterest(futureValue);
+        return futureValue;
 
     }
 }
